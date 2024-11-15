@@ -1,0 +1,109 @@
+/* Sidebar Styles */
+.sidebar {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  z-index: 10; /* Ensures sidebar is below navbars */
+}
+
+/* Main Container Styles */
+.main-container {
+  margin-left: 200px; /* Push the main content area to the right */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 56px; /* Offset by height of the first navbar */
+}
+
+/* Category Navbar Styles */
+.category-navbar {
+  position: sticky;
+  top: 56px; /* Ensures it stays directly below the first navbar */
+  width: calc(100% - 200px); /* Full width minus sidebar width */
+  margin-left: 200px; /* Align with main content area */
+  z-index: 9; /* Place above sidebar but below first navbar */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Search Bar Container Styles */
+.search-bar-container {
+  margin-top: 0;
+  padding-left: 200px;
+  margin-bottom: 10px; /* Small space below search bar */
+}
+
+.search-bar {
+  width: 100%; /* Full width of the container */
+}
+
+/* Main Content Styles */
+.main-content {
+  padding-top: 0; /* Remove extra space between search bar and main content */
+  margin-bottom: 10px; /* Small space above main content and cart section */
+}
+
+/* Table Styles */
+.table-responsive {
+  margin-top: 1rem; /* Add slight space for alignment */
+}
+
+/* Additional Button Styles */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.pay-now-btn {
+  margin-top: 10px; /* Small space above "Pay Now" button */
+  align-self: flex-end;
+}
+
+/* Make the table larger */
+.table-responsive {
+  width: 120%; /* Ensure the table takes up full width of its container */
+  max-width: none; /* Remove any max-width constraints */
+}
+
+/* Increase padding and spacing for quantity controls */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the buttons and quantity number */
+}
+
+.quantity-btn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  font-size: 1.2rem; /* Increase font size for better visibility */
+}
+
+.quantity {
+  font-size: 1.2rem; /* Increase font size of the quantity number */
+  padding: 0 10px; /* Add padding for better spacing around the number */
+}
+
+/* Optional: Increase font size and padding in table cells for larger appearance */
+.table th, .table td {
+  font-size: 1.1rem;
+  padding: 12px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myla's Clothing Store - Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    /* Full-page background image */
+    body {
+      background-image: url('asset/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Navigation bar color and styling */
+    .navbar {
+      background-color: #8C2020;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      color: white;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 40px; /* Adjust the logo size */
+      margin-right: 10px; /* Space between logo and title */
+    }
+
+    .navbar-brand:hover {
+      color: #f8f9fa;
+    }
+
+    /* Floating image styling */
+    .floating-image {
+      position: absolute;
+      top: 120px; /* Adjust as needed */
+      z-index: 500;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 150px; /* Adjust size as needed */
+      height: auto;
+    }
+
+    /* Centered login box */
+    .login-container {
+      background-color: rgba(51, 38, 97, 0.9); /* Slightly transparent */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(240, 234, 234, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-top: 220px; /* Space for the navbar and floating image */
+    }
+
+    /* Forgot password styling */
+    .forgot-password {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="asset/logo.png" alt="Logo">
+        Myla's Clothing Store
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floating Image -->
+  <img src="asset/bg.jpg" alt="Floating Image" class="floating-image">
+
+  <!-- Centered Login Form -->
+  <div class="login-container">
+    <div class="login-header">
+      <h2 class="text-center">Myla's Clothing Store</h2>
+    </div>
+    
+    <!-- Login Form -->
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+      </div>
+      
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary login-btn">Log In</button>
+      </div>
+
+      <a href="#" class="forgot-password">Forgot password?</a>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to handle the login and redirect -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from refreshing the page
+
+      // Simple form validation logic can be added here
+
+      // Redirect to the dashboard page
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>
