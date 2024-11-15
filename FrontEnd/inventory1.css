@@ -1,0 +1,202 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(/assets/1.jpg);
+    color: #333;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+/*logo in navbar*/
+.navbar{
+    height: 60px;
+}
+.navbar-brand{
+    margin-top: 10px;
+}
+
+
+/* Profile icon*/
+.user{
+   height: 35px; 
+}
+
+/* inventory*/
+.table{
+ width: 1000px;
+ margin-left:100px;
+ margin-top: 100px;
+
+}
+
+.sub{
+    margin-left: 400px;
+}
+
+/* Sidebar styling */
+
+
+.side{
+    background: linear-gradient(
+        to bottom, rgb(255, 157, 0), rgb(71, 71, 71)
+    );
+}
+.sidebar {
+    background-color: #F97400; /* Updated sidebar background color */
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar .store-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: #333; /* Ensures links in the sidebar stand out on the orange background */
+    background-color: #b95400;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d36300;
+    color: #fff;
+}
+
+.sidebar ul li a.active {
+    background-color: #b95400;
+    color: white;
+}
+
+/* Main content styling */
+.main-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #b22222;
+    color: white;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #2B4024; /* Updated navbar background color */
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar input[type="text"] {
+    margin-left: 20px;
+    border-radius: 4px;
+}
+
+.btn-toolbar input {
+    width: 250px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* Filter button styling */
+.filter-section {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.filter-section .form-group {
+    margin-right: 20px;
+}
+
+#monthFilter {
+    width: 200px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button#filter {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button#filter:hover {
+    background-color: #8b1a1a;
+}
+
+/* Table styling */
+.table {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    font-weight: bold;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F97400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-section .form-group {
+        margin-bottom: 10px;
+    }
+}
