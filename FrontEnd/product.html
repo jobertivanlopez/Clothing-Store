@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store Dashboard</title>
+    <title>Clothing Product</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome -->
@@ -41,7 +41,7 @@
                             <a class="nav-link " href="dashboard.html">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sales</a>
+                            <a class="nav-link" href="sale.html">Sales</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Profit & Expenses</a>
@@ -118,19 +118,28 @@
                             <input type="number" class="form-control" id="totalInvestment" step="0.01">
                         </div>
                     </div>
-
                     <div class="row mb-3">
-                        <!-- Total Sale -->
+                        <!-- Quantity Sold -->
                         <div class="col-md-6">
-                            <label for="totalSale" class="form-label text-dark">Total Sale</label>
-                            <input type="number" class="form-control" id="totalSale" step="0.01">
+                            <label for="totalsale" class="form-label text-dark">Total Sale</label>
+                            <input type="number" class="form-control" id="totalsale" step="0.01">
+                        </div>
+
+                        <!-- Total Investment -->
+                        <div class="col-md-6">
+                            <label for="profitstatus" class="form-label text-dark">Profit Status</label>
+                            <input type="number" class="form-control" id="profitstatus" step="0.01">
                         </div>
                     </div>
+
+                    
+
+                
 
                     <!-- Modal Footer with Action Button -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Products</button>
+                        <button type="submit" class="btn btn-primary">Save Product</button>
                     </div>
                 </form>
             </div>
@@ -251,12 +260,19 @@
                     </div>
 
                     <div class="row mb-3">
-                        <!-- Total Sale -->
+                        <!-- total sale -->
                         <div class="col-md-6">
-                            <label for="totalSale" class="form-label text-dark">Total Sale</label>
-                            <input type="number" class="form-control" id="totalSale" step="0.01">
+                            <label for="totalsale" class="form-label text-dark">Total Sale</label>
+                            <input type="number" class="form-control" id="totalsale" step="0.01">
+                        </div>
+
+                        <!-- profit status -->
+                        <div class="col-md-6">
+                            <label for="profitstatus" class="form-label text-dark">Profit Status</label>
+                            <input type="number" class="form-control" id="profitstatus" step="0.01">
                         </div>
                     </div>
+                    <div class="row mb-3">
                 </form>
             </div>
             <div class="modal-footer">
@@ -265,7 +281,7 @@
             </div>
         </div>
     </div>
-</div>s
+</div>
 
     <!-- Filter and Search Functionality -->
     <script>
