@@ -1,8 +1,8 @@
 /* General styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(/assets/1.jpg);
-    color: #333;
+    background-color:#333;
+    color: #333333;
     margin: 0;
     padding: 0;
 
@@ -28,10 +28,13 @@ h1, h2, h3 {
 
 /* form*/
 .formm{
-    margin-left: 100px;
+    margin-left: 10px;
     margin-top: 50px;
 }
-
+.table-container{
+    margin-left: 10px;
+    margin-top: 10px;
+}
 .sub{
     margin-left: 400px;
 }
