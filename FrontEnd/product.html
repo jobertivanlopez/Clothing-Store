@@ -55,13 +55,90 @@
                     </ul>
                 </div>
             </nav>
-    
-    <!-- form -->
 
 
-
-      <!-- inventory -->
     <div class="table-container">
+       <!-- Trigger Button for Modal (Small Button) -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add Product
+</button>
+
+<!-- Modal Structure (Larger Form Inside) -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"> 
+        <!-- Add Product -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Product Form -->
+                <form class="form">
+                    <div class="row mb-3">
+                        <!-- Product Name -->
+                        <div class="col-md-6">
+                            <label for="productName" class="form-label text-dark">Product Name</label>
+                            <input type="text" class="form-control" id="productName" aria-describedby="productNameHelp" required>
+                        </div>
+
+                        <!-- Unit Investment -->
+                        <div class="col-md-6">
+                            <label for="unitInvestment" class="form-label text-dark">Unit Investment</label>
+                            <input type="number" class="form-control" id="unitInvestment" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <!-- Unit Price -->
+                        <div class="col-md-6">
+                            <label for="unitPrice" class="form-label text-dark">Unit Price</label>
+                            <input type="number" class="form-control" id="unitPrice" step="0.01" required>
+                        </div>
+
+                        <!-- Quantity in Hand -->
+                        <div class="col-md-6">
+                            <label for="quantityInHand" class="form-label text-dark">Quantity in Hand</label>
+                            <input type="number" class="form-control" id="quantityInHand" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <!-- Quantity Sold -->
+                        <div class="col-md-6">
+                            <label for="quantitySold" class="form-label text-dark">Quantity Sold</label>
+                            <input type="number" class="form-control" id="quantitySold" step="0.01">
+                        </div>
+
+                        <!-- Total Investment -->
+                        <div class="col-md-6">
+                            <label for="totalInvestment" class="form-label text-dark">Total Investment</label>
+                            <input type="number" class="form-control" id="totalInvestment" step="0.01">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <!-- Total Sale -->
+                        <div class="col-md-6">
+                            <label for="totalSale" class="form-label text-dark">Total Sale</label>
+                            <input type="number" class="form-control" id="totalSale" step="0.01">
+                        </div>
+                    </div>
+
+                    <!-- Modal Footer with Action Button -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- inventory -->
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -101,6 +178,9 @@
                 <td>15</td>
                 <td>25</td>
                 <td>15</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="bi bi-pencil-square"></i>
+                  </button></td>
                 <tr>
             <tr>
                 <th scope="row">Pants</th>
@@ -110,7 +190,10 @@
                 <td>25</td>
                 <td>15</td>
                 <td>25</td>
-                <td>15</td>              
+                <td>15</td> 
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="bi bi-pencil-square"></i>
+                  </button></td>             
             <tr>
           </tbody>
           <!-- Modal -->
@@ -129,7 +212,7 @@
                         <!-- Product Name -->
                         <div class="col-md-6">
                             <label for="productName" class="form-label text-dark">Product Name</label>
-                            <input type="text" class="form-control" id="productName" aria-describedby="productNameHelp">
+                            <input type="text" class="form-control" id="productName" aria-describedby="productNameHelp" >
                         </div>
 
                         <!-- Unit Investment -->
@@ -182,10 +265,7 @@
             </div>
         </div>
     </div>
-</div>
-
-
-
+</div>s
 
     <!-- Filter and Search Functionality -->
     <script>
