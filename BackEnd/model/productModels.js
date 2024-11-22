@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     }
 }, { timestamps: true });  // Timestamps will add 'createdAt' and 'updatedAt' automatically
 
-// Create the Clothing model based on the schema
+// Create the Product model based on the schema
 const product = mongoose.model('product', productSchema);
 
 module.exports = Product;
