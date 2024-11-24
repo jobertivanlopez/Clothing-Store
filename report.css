@@ -1,0 +1,247 @@
+/* logo in navbar */
+.navbar {
+  height: 60px;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+}
+
+/* Profile icon */
+.user {
+  height: 35px;
+}
+
+/* Sidebar styling */
+/* Sidebar Styles */
+body {
+  overflow-x: hidden;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: 75px;
+  background-color: #333; /* Sidebar bg */
+  color: #fff;
+  z-index: 800; /* stays on top */
+  overflow-y: auto; /* scrollable */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* shadow effect */
+}
+
+/* Sidebar Links */
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Category Navbar Styling */
+.category-navbar {
+  position: sticky;
+  top: 56px; /* Align the second navbar just below the first navbar */
+  width: calc(100% - 200px); /* Make it fit the available space */
+  margin-left: 200px; /* Align it with main content */
+  background-color: #ffc107; /* Yellow background */
+  z-index: 9; /* Keep the navbar on top */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* First Navbar */
+.first-navbar {
+  position: sticky;
+  top: 0; /* Fixed at the top */
+  width: 100%;
+  background-color: #2B4024; /* Dark background for first navbar */
+  color: #fff;
+  z-index: 900; /* Ensures it's above other content */
+  padding: 10px 20px;
+}
+
+.first-navbar .navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.first-navbar .navbar-nav .nav-item {
+  padding: 10px 15px;
+}
+
+.first-navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+.first-navbar .navbar-nav .nav-link:hover {
+  color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  color: #343a40;
+  font-weight: bold;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.filter-bar label {
+  font-weight: bold;
+}
+
+.summary-table {
+  margin-top: 20px;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+/* Ensure modal dialog is properly sized and centered */
+.modal-dialog {
+  max-width: 500px;  /* Control the maximum width of the modal */
+  width: 150%;       /* Make it responsive */
+  margin: 30px auto; /* Center the modal */
+}
+
+.modal-content {
+  border-radius: 5px;  /* Optional: Adds rounded corners for better visual appearance */
+}
+
+/* Ensure modal body has scrolling if needed */
+.modal-body {
+  padding: 20px;
+  max-height: 80vh;  /* Restrict modal height to 80% of the viewport height */
+  overflow-y: auto;  /* Allow vertical scrolling if the content is too tall */
+}
+
+/* Ensure that the modal backdrop stays behind the modal */
+.modal-backdrop.show {
+  z-index: 1040;  /* Ensure backdrop is under the modal */
+}
+
+/* Ensure the modal has higher stacking order */
+.modal {
+  z-index: 1050;  /* Higher than other elements */
+}
+
+/* On small screens, make the modal width 90% */
+@media (max-width: 576px) {
+  .modal-dialog {
+      width: 90%;
+      margin: 20px auto;
+  }
+}
+
+/* For the Add Expenses section to show fully on click */
+#add-expenses-modal {
+  display: block; /* Show the modal when clicked */
+}
+
+/* Button hover and animation */
+.btn:hover {
+  transition: background-color 0.3s ease;
+}
+
+/* Style for Edit and Delete buttons */
+.edit-btn, .delete-btn {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* Add some space between the modal form fields */
+.modal-form input, .modal-form select, .modal-form textarea {
+  margin-bottom: 10px;
+}
+
+/* For table that displays expenses */
+.expenses-table td, .expenses-table th {
+  padding: 12px 15px;
+}
+
+.expenses-table th {
+  background-color: #f4f4f4;
+}
+
+/* Hide the modal after delete or submit */
+#expense-delete-confirm {
+  display: none;
+}
+
+/* Customizing the Expenses Table */
+#expenses-table td {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#expenses-table .expense-edit {
+  cursor: pointer;
+  color: #ffc107;
+  font-size: 18px;
+}
+
+#expenses-table .expense-edit:hover {
+  color: #ff9800;
+}
+
+#expenses-table .expense-delete {
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 18px;
+}
+
+#expenses-table .expense-delete:hover {
+  color: #ff6347;
+}

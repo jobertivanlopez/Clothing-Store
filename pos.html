@@ -6,13 +6,14 @@
     <title>Clothing Store</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="pos.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         /* Custom styles */
         .sidebar {
-            min-height: 100vh;
-            background-color: #f8f9fa;
+            background: linear-gradient(to bottom, rgb(255, 157, 0), rgb(71, 71, 71));
+            height: 100vh;
             padding-top: 20px;
             position: fixed;
             top: 0;
@@ -21,62 +22,99 @@
             width: 200px;
             z-index: 10;
         }
-        .main-container {
-            margin-left: 200px;
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            text-align: left;
+        }
+        .sidebar ul li a {
+            color: #333;
+            background-color: #b95400;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+        }
+        .sidebar ul li a:hover {
+            background-color: #d36300;
+            color: #fff;
+        }
+        .sidebar ul li a.active {
+            background-color: #b95400;
+            color: white;
+        }
+        .navbar {
+            background-color: #2B4024;
+            color: white;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+        }
+        .user {
+            width: 30px;
+            height: 30px;
+        }
+         /* Grand Total Box */
+         .pay-now-section {
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-            padding-top: 56px;
+            justify-content: space-between;
+            height: 100vh;
         }
-        .category-navbar {
-            position: sticky;
-            top: 56px;
-            width: calc(100% - 200px);
-            margin-left: 200px;
-            z-index: 9;
+
+        .pay-now-content {
+            flex: 1;
+            overflow-y: auto;
         }
-        .navbar-nav {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-        .search-bar-container {
-            margin-top: 0;
-            padding-left: 200px;
-        }
-        .search-bar {
-            width: 100%;
-        }
-        .main-content {
-            padding-top: 0;
-        }
-        .table-responsive {
-            margin-top: 1rem;
+
+        .grand-total-box {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f1f1f1;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: auto;
+            z-index: 100;
+            text-align: center;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
 
-    <!-- First Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <!-- Navigation Bar -->
+    <div class="first-navbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <h3 class="navbar-brand">
-                <img src="asset/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                <img src="/asset/logo.png" alt="Logo" width="30" height="30" class="logo d-inline-block align-top">
                 Myla's Clothing Store
             </h3>
-            <span style="color: white;">Welcome to Myla's Clothing Store</span>
+            <!-- Profile Icon -->
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown">
-                    <i class="fas fa-user-circle fa-2x"></i>
+                    <i class="bi bi-person-fill" style="font-size: 2rem; color: black"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#" id="logoutBtn">Log Out</a>
+                    <a class="dropdown-item" href="index.html" id="logoutBtn">Log Out</a>
                 </div>
             </div>
         </div>
     </nav>
+    </div>
+    
+
+    <div class="container-fluid">
+        <div class="row">
 
     <!-- Second Navigation Bar -->
+    <div class="second-navbar">
     <nav class="navbar navbar-expand navbar-light bg-warning category-navbar">
         <div class="container-fluid">
             <ul class="navbar-nav">
@@ -93,26 +131,40 @@
                 <li class="nav-item"><a class="nav-link" href="#Terno">Terno</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Uniform">Uniform</a></li>
             </ul>
-        </div>
     </nav>
-
-    <!-- Search Bar Container -->
-    <div class="container-fluid search-bar-container">
-        <input type="text" class="form-control search-bar" placeholder="Search items...">
+    </div>
     </div>
 
+    <!-- Search Bar Container -->
+    <div class="container">
+        <div class="search-bar-container">
+          <input type="text" class="form-control search-bar" placeholder="Search items..." id="searchInput">
+        </div>
+      </div>      
+    
     <div class="container-fluid main-container">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-2 sidebar">
-                <h4 class="sidebar-title text-center">Menu</h4>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cast"></i> POS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-graph-up"></i> Report</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Inventory</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart-plus-fill"></i> Add Product</a></li>
-                </ul>
+            <nav class="side col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">POS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="report.html">Report</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            </nav>
 
             <!-- Main Content Area -->
             <div class="col-md-10 main-content">
@@ -121,7 +173,6 @@
                     <div class="col-md-8">
                         <div class="row">
                             <!-- Item Cards -->
-                            <!-- Example Card with Data Attribute -->
                             <div class="col-md-3 mb-4" data-category="Dress">
                                 <div class="card">
                                     <img src="asset/max1.jpg" class="card-img-top" alt="Item 1">
@@ -146,7 +197,7 @@
                                 <div class="card">
                                     <img src="asset/s1.jpg" class="card-img-top" alt="Item 1">
                                     <div class="card-body">
-                                        <h5 class="card-title">Korean maxi</h5>
+                                        <h5 class="card-title">Short</h5>
                                         <p class="card-text">300.00</p>
                                         <button class="btn btn-success">Add to Cart</button>
                                     </div>
@@ -156,7 +207,7 @@
                                 <div class="card">
                                     <img src="asset/un1.png" class="card-img-top" alt="Item 1">
                                     <div class="card-body">
-                                        <h5 class="card-title">Korean maxi</h5>
+                                        <h5 class="card-title">Elem Blouse</h5>
                                         <p class="card-text">300.00</p>
                                         <button class="btn btn-success">Add to Cart</button>
                                     </div>
@@ -166,7 +217,7 @@
                                 <div class="card">
                                     <img src="asset/sm5.jpg" class="card-img-top" alt="Item 1">
                                     <div class="card-body">
-                                        <h5 class="card-title">Korean maxi</h5>
+                                        <h5 class="card-title">Hawaian tern</h5>
                                         <p class="card-text">300.00</p>
                                         <button class="btn btn-success">Add to Cart</button>
                                     </div>
@@ -232,11 +283,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Add additional items similarly -->
                         </div>
                     </div>
-
-                    <!-- Right Side: Pay Now Section -->
+                    <!--Pay Now Section -->
                     <div class="col-md-4 d-flex flex-column">
                         <div class="table-responsive mb-auto">
                             <table class="table">
@@ -255,7 +304,7 @@
                             </table>
                         </div>
                         <!-- Grand Total Box -->
-                        <div class="border p-3 mt-auto text-md-center">
+                        <div class="border p-3 mt-3 text-md-center">
                             <p><strong>Grand Total: $<span id="grandTotal">0.00</span></strong></p>
                         </div>
                         <!-- Pay Now Button to trigger the modal -->
@@ -274,16 +323,16 @@
                                 <div class="modal-body">
                                   <form>
                                     <div class="mb-3">
-                                        <label for="receivedAmount" class="form-label">Received Amount</label>
-                                        <input type="number" class="form-control" id="receivedAmount">
+                                      <label for="receivedAmount" class="form-label">Received Amount</label>
+                                      <input type="number" class="form-control" id="receivedAmount">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payingAmount" class="form-label">Paying Amount</label>
-                                        <input type="number" class="form-control" id="payingAmount">
+                                      <label for="payingAmount" class="form-label">Paying Amount</label>
+                                      <input type="number" class="form-control" id="payingAmount">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="changeAmount" class="form-label">Change</label>
-                                        <input type="number" class="form-control" id="changeAmount" readonly>
+                                      <label for="changeAmount" class="form-label">Change</label>
+                                      <input type="number" class="form-control" id="changeAmount" readonly>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Cancel</button>
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -291,7 +340,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div>                          
                     </div>
                 </div>
             </div>
