@@ -131,9 +131,57 @@
                 <input type="text" id="filterYear" class="form-control" placeholder="Enter Year">
             </div>
             <div class="col-md-4 d-flex align-items-end">
-                <button id="filterBtn" class="btn btn-primary btn-block">Apply Filters</button>
+                <!-- Button to trigger the filter modal -->
+<button id="openFilterModal" class="btn btn-primary" data-toggle="modal" data-target="#filterModal">
+    Apply Filters
+</button>
+
             </div>
         </div>
+    <!-- Apply Filter Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="filterModalLabel">Apply Filters</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Filter Form -->
+                <form id="filterForm">
+                    <div class="form-group">
+                        <label for="filterMonth">Filter by Month:</label>
+                        <select id="filterMonth" class="form-control">
+                            <option value="All">All</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="filterYear">Filter by Year:</label>
+                        <input type="number" id="filterYear" class="form-control" placeholder="Enter Year" min="2000" max="2099">
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary" id="applyFiltersBtn">Apply Filters</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- Tables Section -->
         <div class="row">
@@ -237,6 +285,32 @@
 
     </div>
         </div>
+            <!-- Add Expense Modal -->
+<div class="modal fade" id="addExpenseModal" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addExpenseModalLabel">Add Monthly Expense</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addExpenseForm">
+                    <div class="form-group">
+                        <label for="expenseType">Expense Type:</label>
+                        <input type="text" id="expenseType" class="form-control" placeholder="Enter Expense Type">
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseAmount">Total Expenses:</label>
+                        <input type="number" id="expenseAmount" class="form-control" placeholder="Enter Amount">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="saveExpenseBtn">Save Expenses</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- Add Expense Modal -->
                      <div class="modal fade" id="addExpenseModal" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
@@ -245,49 +319,6 @@
                                 <div class="modal-header">
                                 </div> <!-- End of container-fluid -->
                     
-                <!-- Add Expense Modal -->
-                    <div class="modal fade" id="addExpenseModal" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="addExpenseModalLabel">Add Monthly Expense</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="addExpenseForm">
-                                        <div class="form-group">
-                                            <label for="expenseMonth">Month:</label>
-                                            <select id="expenseMonth" class="form-control">
-                                                <option value="January">January</option>
-                                                <option value="February">February</option>
-                                                <option value="March">March</option>
-                                                <option value="April">April</option>
-                                                <option value="May">May</option>
-                                                <option value="June">June</option>
-                                                <option value="July">July</option>
-                                                <option value="August">August</option>
-                                                <option value="September">September</option>
-                                                <option value="October">October</option>
-                                                <option value="November">November</option>
-                                                <option value="December">December</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="expenseType">Expense Type:</label>
-                                            <input type="text" id="expenseType" class="form-control" placeholder="Enter Expense Type">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="expenseAmount">Amount:</label>
-                                            <input type="number" id="expenseAmount" class="form-control" placeholder="Enter Amount">
-                                        </div>
-                                        <button type="button" class="btn btn-primary" id="saveExpenseBtn">Save Expense</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
             
                 <!-- Edit Expense Modal -->
