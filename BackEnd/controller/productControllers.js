@@ -11,12 +11,12 @@ const getProducts = async (req, res) => {
     }
 };
 
-// Get a single [product] item by ID
+// Get a single [product] item by name
 const getProduct = async (req, res) => {
-    const { id } = req.params;  
+    const { name } = req.params;  
 
     try {
-        const product = await Product.findById(id);  
+        const product = await Product.findByName(name);  
         if (!clothing) {
             return res.status(404).json({ error: 'Product not found' });
         }

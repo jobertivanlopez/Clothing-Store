@@ -1,14 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+const { createProduct } = require('../controller/clothingController')
+
 // POST route to add a new product
-router.post('/', (req, res) => {
-    res.json({message: 'POST a new product',
-        
-     });
-
-
-});
+router.route('/new').post(createProduct)
 
 //POST route to update a new product
 router.patch('/:id', (req, res) => {

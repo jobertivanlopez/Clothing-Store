@@ -49,4 +49,4 @@ const clothingSchema = new mongoose.Schema({
 // Create the Product model based on the schema
 const clothing = mongoose.model('clothing', clothingSchema);
 
-module.exports = Clothing;
+module.exports = clothing;
