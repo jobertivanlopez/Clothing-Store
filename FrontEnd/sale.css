@@ -1,17 +1,74 @@
 /* General styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    color: #333333;
+    background-image:url(/assets/1.jpg);
+    background-size: fixed;
     margin: 0;
     padding: 0;
+
+}
+.month{
+    margin-bottom:10px;
+    text-align: justify;
+    margin-left: 50px;
+
+}
+.text{
+    margin-top: 10px;
+    text-align: justify;
+    margin-left: 0px;
 }
 
 h1, h2, h3 {
     font-weight: bold;
 }
 
+/*logo in navbar*/
+.navbar{
+    height: 60px;
+}
+.navbar-brand{
+    margin-top: 10px;
+}
+
+
+/* Profile icon*/
+.user{
+   height: 35px; 
+}
+
+
+/* formmmmmm*/
+.table{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 1000px;
+    height: 250px;
+   
+
+   
+}
+
+.btn{
+    margin-bottom: 20px;
+}
+.table-container{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.sub{
+    margin-left: 400px;
+}
+
 /* Sidebar styling */
+
+
+.side{
+    background: linear-gradient(
+        to bottom, rgb(255, 157, 0), rgb(71, 71, 71)
+    );
+}
 .sidebar {
     background-color: #F97400; /* Updated sidebar background color */
     height: 100vh;
