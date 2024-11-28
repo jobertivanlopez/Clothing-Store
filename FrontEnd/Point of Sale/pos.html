@@ -26,7 +26,7 @@
                     
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="/Login/index.html" id="logoutBtn">Log Out</a>
+                    <a class="dropdown-item" href="/FrontEnd/Login/index.html" id="logoutBtn">Log Out</a>
                 </div>
             </div>
         </div>
@@ -73,16 +73,16 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link  " href="/FrontEnd/product.html">Product</a>
+                            <a class="nav-link bi bi-shop " href="/FrontEnd/Product/product.html">   Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/FrontEnd/Report/report.html">Profit & Expenses</a>
+                            <a class="nav-link active bi bi-cart4 " href="/FrontEnd/Point of Sale/pos.html">   POS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/FrontEnd/sale.html">Sales</a>
+                            <a class="nav-link bi bi-receipt " href="/FrontEnd/Sale/sale.html">   Sales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/FrontEnd/Point of Sale/pos.html">Point of Sale</a>
+                            <a class="nav-link bi bi-clipboard-x" href="/FrontEnd/Report/report.html">   Report</a>
                         </li>
                     </ul>
                 </div>
@@ -226,12 +226,11 @@
                             </table>
                         </div>
                         <!-- Grand Total Box -->
-                        <div class="border p-3 mt-3 text-md-center">
+                        <div class="total border p-3 mt-3 text-md-center">
                             <p><strong>Grand Total: $<span id="grandTotal">0.00</span></strong></p>
+                            <button class="btn btn-success mt-3 align-content-center" data-toggle="modal" data-target="#exampleModal">Pay Now</button>
                         </div>
-                        <!-- Pay Now Button to trigger the modal -->
-                        <button class="btn btn-success mt-3 align-content-center" data-toggle="modal" data-target="#exampleModal">Pay Now</button>
-
+                        
                         <!-- Modal Structure -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">

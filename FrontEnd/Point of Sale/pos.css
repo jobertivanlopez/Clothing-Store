@@ -57,6 +57,13 @@ body, html {
 }
 
 /* Main Content Styling */
+.total{
+  margin-bottom: 1000px;
+ }
+
+
+
+
 .main-container {
   margin-left: 300px; /* Offset the content to make room for the sidebar */
   padding-top: 120px; /* Adjust for both navbars height */

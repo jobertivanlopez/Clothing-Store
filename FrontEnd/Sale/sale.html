@@ -15,9 +15,10 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <h3 class="navbar-brand">
-                <img src="/asset/2.png" alt="Logo" width="30" height="30" class="logo d-inline-block align-top">
+                <img src="/asset/logo.png" alt="Logo" width="30" height="30" class="logo d-inline-block align-top">
                 Myla's Clothing Store
             </h3>
+    
             <!-- Profile Icon -->
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown">
@@ -25,7 +26,7 @@
                     
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="/Login/index.html" id="logoutBtn">Log Out</a>
+                    <a class="dropdown-item" href="/FrontEnd/Login/index.html" id="logoutBtn">Log Out</a>
                 </div>
             </div>
         </div>
@@ -38,16 +39,16 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link  " href="/FrontEnd/product.html">Product</a>
+                            <a class="nav-link bi bi-shop " href="/FrontEnd/Product/product.html">   Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/FrontEnd/Report/report.html">Profit & Expenses</a>
+                            <a class="nav-link bi bi-cart4 " href="/FrontEnd/Point of Sale/pos.html">   POS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/FrontEnd/sale.html">Sales</a>
+                            <a class="nav-link active bi bi-receipt " href="/FrontEnd/Sale/sale.html">   Sales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/FrontEnd/Point of Sale/pos.html">Point of Sale</a>
+                            <a class="nav-link bi bi-clipboard-x" href="/FrontEnd/Report/report.html">   Report</a>
                         </li>
                     </ul>
                 </div>
@@ -55,7 +56,6 @@
              <!-- Main content -->
              <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                    <h2 class="text text-white">Sales</h2>
                 </div>
              <!-- Filter Section -->
              <div class="month">
@@ -124,46 +124,7 @@
                   <tr>
                 </tbody>
 
-
-    
-
-    <!-- Filter and Search Functionality -->
-    <script>
-        document.getElementById('filter').addEventListener('click', function() {
-            var month = document.getElementById('monthFilter').value;
-            alert("Filter by " + month);
-            // Add your filter logic here
-        });
-
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
-            var searchQuery = this.value.toLowerCase();
-            var rows = document.querySelectorAll('#inventoryTableBody tr');
-
-            rows.forEach(function(row) {
-                var productName = row.querySelector('td').textContent.toLowerCase();
-                if (productName.includes(searchQuery)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-
-        // Logout button and modal functionality
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            $('#logoutModal').modal('show');
-        });
-
-        document.getElementById('confirmLogout').addEventListener('click', function() {
-            // Add your logout logic here
-            alert('You have logged out.');
-            $('#logoutModal').modal('hide');
-        });
-
-
-
-    </script>
+    <script src="sale.js"> </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 

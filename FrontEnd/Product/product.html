@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store Dashboard</title>
+    <title>Clothing Product</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome -->
@@ -15,17 +15,17 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <h3 class="navbar-brand">
-                <img src="/asset/2.png" alt="Logo" width="30" height="30" class="logo d-inline-block align-top">
+                <img src="/asset/logo.png" alt="Logo" width="30" height="30" class="logo d-inline-block align-top">
                 Myla's Clothing Store
             </h3>
-            <!-- Profile Icon -->
-            <div class="nav-item dropdown">
+             <!-- Profile Icon -->
+             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown">
                     <span><img src="./user icon.svg" class="user" alt=""></span>
                     
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="/Login/index.html" id="logoutBtn">Log Out</a>
+                    <a class="dropdown-item" href="/FrontEnd/Login/index.html" id="logoutBtn">Log Out</a>
                 </div>
             </div>
         </div>
@@ -38,16 +38,16 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/FrontEnd/product.html">Product</a>
+                            <a class="nav-link active bi bi-shop " href="/FrontEnd/Product/product.html">   Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/FrontEnd/Report/report.html">Profit & Expenses</a>
+                            <a class="nav-link bi bi-cart4 " href="/FrontEnd/Point of Sale/pos.html">   POS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/FrontEnd/sale.html">Sales</a>
+                            <a class="nav-link bi bi-receipt " href="/FrontEnd/Sale/sale.html">   Sales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/FrontEnd/Point of Sale/pos.html">Point of Sale</a>
+                            <a class="nav-link bi bi-clipboard-x" href="/FrontEnd/Report/report.html">   Report</a>
                         </li>
                     </ul>
                 </div>
@@ -115,14 +115,23 @@
                             <input type="number" class="form-control" id="totalInvestment" step="0.01">
                         </div>
                     </div>
-
                     <div class="row mb-3">
-                        <!-- Total Sale -->
+                        <!-- Quantity Sold -->
                         <div class="col-md-6">
-                            <label for="totalSale" class="form-label text-dark">Total Sale</label>
-                            <input type="number" class="form-control" id="totalSale" step="0.01">
+                            <label for="totalsale" class="form-label text-dark">Total Sale</label>
+                            <input type="number" class="form-control" id="totalsale" step="0.01">
+                        </div>
+
+                        <!-- Total Investment -->
+                        <div class="col-md-6">
+                            <label for="profitstatus" class="form-label text-dark">Profit Status</label>
+                            <input type="number" class="form-control" id="profitstatus" step="0.01">
                         </div>
                     </div>
+
+                    
+
+                
 
                     <!-- Modal Footer with Action Button -->
                     <div class="modal-footer">
@@ -135,7 +144,7 @@
     </div>
 </div>
 
-        <!-- inventory -->
+         <!-- inventory -->
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -248,12 +257,19 @@
                     </div>
 
                     <div class="row mb-3">
-                        <!-- Total Sale -->
+                        <!-- total sale -->
                         <div class="col-md-6">
-                            <label for="totalSale" class="form-label text-dark">Total Sale</label>
-                            <input type="number" class="form-control" id="totalSale" step="0.01">
+                            <label for="totalsale" class="form-label text-dark">Total Sale</label>
+                            <input type="number" class="form-control" id="totalsale" step="0.01">
+                        </div>
+
+                        <!-- profit status -->
+                        <div class="col-md-6">
+                            <label for="profitstatus" class="form-label text-dark">Profit Status</label>
+                            <input type="number" class="form-control" id="profitstatus" step="0.01">
                         </div>
                     </div>
+                    <div class="row mb-3">
                 </form>
             </div>
             <div class="modal-footer">
@@ -262,45 +278,10 @@
             </div>
         </div>
     </div>
-</div>s
+</div>
 
-    <!-- Filter and Search Functionality -->
-    <script>
-        document.getElementById('filter').addEventListener('click', function() {
-            var month = document.getElementById('monthFilter').value;
-            alert("Filter by " + month);
-            // Add your filter logic here
-        });
-
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
-            var searchQuery = this.value.toLowerCase();
-            var rows = document.querySelectorAll('#inventoryTableBody tr');
-
-            rows.forEach(function(row) {
-                var productName = row.querySelector('td').textContent.toLowerCase();
-                if (productName.includes(searchQuery)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-
-        // Logout button and modal functionality
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            $('#logoutModal').modal('show');
-        });
-
-        document.getElementById('confirmLogout').addEventListener('click', function() {
-            // Add your logout logic here
-            alert('You have logged out.');
-            $('#logoutModal').modal('hide');
-        });
-
-
-
-    </script>
+    
+    <script src="product.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
