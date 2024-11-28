@@ -1,250 +1,244 @@
-/* Sidebar Styles */
-body {
-    overflow-x: hidden;
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  
-  /* Sidebar Styles */
-  .sidebar {
-    position: fixed; 
-    left: 0;
-    width: 300px; 
-    height: 100vh;
-    margin-top: 75px;
-    background-color: #333; /* Sidebar bg*/
-    color: #fff;
-    z-index: 800; /* stays on top */
-    overflow-y: auto; /* scrollable */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /*shadow effect */
-  }
-  
-  /* Sidebar Links */
-  .sidebar a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    
-  }
-  
-  .sidebar a:hover {
-    background-color: #575757;
-  }
-  
-  /* Main Content Container */
-  .main-container {
-    margin-left: 300px; /* Offset the content to make room for the sidebar */
-    padding-top: 120px; /* Adjust for both navbars height */
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden; /* Prevents content from overflowing */
-  }
-  
-  /* Category Navbar Styling */
-  .category-navbar {
-    position: sticky;
-    top: 56px; /* Align the second navbar just below the first navbar */
-    width: calc(100% - 200px); /* Make it fit the available space */
-    margin-left: 200px; /* Align it with main content */
-    background-color: #ffc107; /* Yellow background */
-    z-index: 9; /* Keep the navbar on top */
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  /* First Navbar */
-  .first-navbar {
-    position: sticky;
-    top: 0; /* Fixed at the top */
-    width: 100%;
-    background-color: #2B4024; /* Dark background for first navbar */
-    color: #fff;
-    z-index: 900; /* Ensures it's above other content */
-    padding: 10px 20px;
-  }
-  
-  .first-navbar .navbar-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-  
-  .first-navbar .navbar-nav .nav-item {
-    padding: 10px 15px;
-  }
-  
-  .first-navbar .navbar-nav .nav-link {
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .first-navbar .navbar-nav .nav-link:hover {
-    color: #ccc;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
-    padding-top: 0; /* Remove extra space between search bar and main content */
-    margin-bottom: 10px; /* Small space above main content and cart section */
-  }
-  
-  /* Table Styles */
-  .table-responsive {
-    margin-top: 1rem; /* Add slight space for alignment */
-  }
-  
-  /* Optional: Increase font size and padding in table cells for larger appearance */
-  .table th, .table td {
-    font-size: 1.1rem;
-    padding: 12px;
-  }
-  
-  /* Search Bar Styles */
-  .search-bar-container {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 0 15px;
-  }
-  
-  .search-bar {
-    width: 100%;
-    max-width: 900px; /* Limit width of search bar */
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    padding: 20px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #0d482e;
-  }
-  
-  /* Category Navbar Styles */
-  .category-navbar {
-    position: sticky;
-    top: 56px; /* Keep the second navbar just below the first navbar */
-    width: calc(148% - 200px); /* Full width minus sidebar width */
-    margin-left: 200px; /* Align with main content area */
-    z-index: 9; /* Place above sidebar but below the first navbar */
-    background-color: #ffc107;
-  }
-  
-  .navbar-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-  
-  .navbar-nav .nav-item {
-    padding: 10px 15px;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #000 !important;
-    font-weight: bold;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #333;
-    background-color: #0f8858;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
-    padding-top: 0; /* Remove extra space between search bar and main content */
-    margin-bottom: 10px; /* Small space above main content and cart section */
-  }
-  
-  /* Table Styles */
-  .table-responsive {
-    margin-top: 1rem; /* Add slight space for alignment */
-  }
-  
-  /* Additional Button Styles */
-  .quantity-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  .quantity-btn {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  button.pay-now-btn {
-    margin-top: 10px; /* Small space above "Pay Now" button */
-    align-self: flex-end;
-  }
-  
-  /* Make the table larger */
-  .table-responsive {
-    width: 115%; /* Ensure the table takes up full width of its container */
-    max-width: none; /* Remove any max-width constraints */
-  }
-  
-  /* Increase padding and spacing for quantity controls */
-  .quantity-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the buttons and quantity number */
-  }
-  
-  .quantity-btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    font-size: 1.2rem; /* Increase font size for better visibility */
-  }
-  
-  .quantity {
-    font-size: 1.2rem; /* Increase font size of the quantity number */
-    padding: 0 10px; /* Add padding for better spacing around the number */
-  }
-  
-  /* Optional: Increase font size and padding in table cells for larger appearance */
-  .table th, .table td {
-    font-size: 1.1rem;
-    padding: 12px;
-  }
-  
-  /* Card Styles */
-  .card {
-    width: 100%; /* Ensures the card fits within the column */
-    height: 100%; /* Makes all cards the same height */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-img-top {
-    height: 220px; /* Set a fixed height for images */
-    object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
-  }
-  
-  .card-body {
-    flex-grow: 1; /* Ensures the body stretches to fill remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Aligns content evenly within the card body */
-  }
-  
-  .card-title {
-    font-size: 1rem; /* Adjusts font size */
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-text {
-    font-size: 0.9rem; /* Adjust text size */
-    margin-bottom: 0.5rem;
-  }
-  
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: linear-gradient(to bottom, rgb(255, 157, 0), rgb(71, 71, 71)); /* Gradient background */
+  position: fixed;
+  top: 56px; /* Positioned below the first navbar */
+  left: 0;
+  width: 300px; /* Sidebar width */
+  height: calc(100vh - 56px); /* Full height minus the height of the first navbar */
+  z-index: 0;
+  padding-top: 20px;
+  background-color: #F97400; /* Sidebar background */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.sidebar .store-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: #333;
+  background-color: #b95400;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  background-color: #d36300;
+  color: #fff;
+}
+
+.sidebar ul li a.active {
+  background-color: #b95400;
+  color: white;
+}
+
+/* Main Content Styling */
+.total{
+  margin-bottom: 1000px;
+ }
+
+
+
+
+.main-container {
+  margin-left: 300px; /* Offset the content to make room for the sidebar */
+  padding-top: 120px; /* Adjust for both navbars height */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* Category Navbar Styling */
+.category-navbar {
+  position: sticky;
+  top: 56px; /* Position just below first navbar */
+  width: calc(100% - 300px); /* Full width minus sidebar width */
+  margin-left: 300px; /* Offset to align with main content */
+  background-color: #ffc107; /* Yellow background */
+  z-index: 9; /* Keep on top */
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.category-navbar .navbar-nav .nav-link {
+  font-size: 14px; /* Decrease font size */
+  padding: 5px 10px; /* Reduce padding around the text */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #333;
+  background-color: #0f8858;
+}
+
+/* First Navbar */
+.first-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #2B4024; /* Dark background for first navbar */
+  color: #fff;
+  z-index: 900; /* Ensures it's above other content */
+  padding: 10px 20px;
+}
+
+.first-navbar .navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.first-navbar .navbar-nav .nav-item {
+  padding: 10px 15px;
+}
+
+.first-navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+.first-navbar .navbar-nav .nav-link:hover {
+  color: #ccc;
+}
+
+/* Grand Total Box */
+.grand-total-box {
+  bottom: 10px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #f1f1f1;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: auto;
+  z-index: 100;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* Table Styles */
+.table-responsive {
+  width: 115%; /* Ensure the table takes up full width of its container */
+  max-width: none; /* Remove any max-width constraints */
+  margin-top: 1rem; /* Add slight space for alignment */
+}
+
+.table th, .table td {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+/* Search Bar Styles */
+.search-bar-container {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 900px; /* Limit width of search bar */
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  padding: 20px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #0d482e;
+}
+
+/* Quantity Controls */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the buttons and quantity number */
+}
+
+.quantity-btn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  font-size: 1.2rem; /* Increase font size for better visibility */
+}
+
+.quantity {
+  font-size: 1.2rem; /* Increase font size of the quantity number */
+  padding: 0 10px; /* Add padding for better spacing around the number */
+}
+
+button.pay-now-btn {
+  margin-top: 10px; /* Small space above "Pay Now" button */
+  align-self: flex-end;
+}
+
+/* Card Styles */
+.card {
+  width: 100%; /* Ensures the card fits within the column */
+  height: 100%; /* Makes all cards the same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  height: 220px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
+}
+
+.card-body {
+  flex-grow: 5; /* Ensures the body stretches to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns content evenly within the card body */
+}
+
+.card-title {
+  font-size: 1rem; /* Adjusts font size */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem; /* Adjust text size */
+  margin-bottom: 0.5rem;
+}
+

@@ -11,9 +11,6 @@
   .user {
     height: 35px;
   }
-  
-  /* Sidebar styling */
-  /* Sidebar Styles */
   body {
     overflow-x: hidden;
   }
@@ -26,31 +23,51 @@
   }
   
   /* Sidebar Styles */
-  .sidebar {
-    position: fixed;
-    left: 0;
-    width: 300px;
+  .side{
+    background: linear-gradient(
+        to bottom, rgb(255, 157, 0), rgb(71, 71, 71)
+    );
+}
+.sidebar {
+    background-color: #F97400; /* Updated sidebar background color */
     height: 100vh;
-    margin-top: 75px;
-    background-color: #333; /* Sidebar bg */
-    color: #fff;
-    z-index: 800; /* stays on top */
-    overflow-y: auto; /* scrollable */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* shadow effect */
-  }
-  
-  /* Sidebar Links */
-  .sidebar a {
-    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar .store-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: #333; /* Ensures links in the sidebar stand out on the orange background */
+    background-color: #b95400;
     text-decoration: none;
     display: block;
-    padding: 10px 20px;
-  }
-  
-  .sidebar a:hover {
-    background-color: #575757;
-  }
-  
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d36300;
+    color: #fff;
+}
+
+.sidebar ul li a.active {
+    background-color: #b95400;
+    color: white;
+}
   /* Category Navbar Styling */
   .category-navbar {
     position: sticky;
