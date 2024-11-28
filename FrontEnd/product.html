@@ -38,16 +38,16 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active " href="product.html">Product</a>
+                            <a class="nav-link active bi bi-shop " href="product.html">   Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="">POS</a>
+                            <a class="nav-link bi bi-cart4 " href="">   POS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="sale.html">Sales</a>
+                            <a class="nav-link bi bi-receipt " href="sale.html">   Sales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Report</a>
+                            <a class="nav-link bi bi-clipboard-x" href="#">   Report</a>
                         </li>
                     </ul>
                 </div>
@@ -280,43 +280,8 @@
     </div>
 </div>
 
-    <!-- Filter and Search Functionality -->
-    <script>
-        document.getElementById('filter').addEventListener('click', function() {
-            var month = document.getElementById('monthFilter').value;
-            alert("Filter by " + month);
-            // Add your filter logic here
-        });
-
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
-            var searchQuery = this.value.toLowerCase();
-            var rows = document.querySelectorAll('#inventoryTableBody tr');
-
-            rows.forEach(function(row) {
-                var productName = row.querySelector('td').textContent.toLowerCase();
-                if (productName.includes(searchQuery)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-
-        // Logout button and modal functionality
-        document.getElementById('logoutBtn').addEventListener('click', function() {
-            $('#logoutModal').modal('show');
-        });
-
-        document.getElementById('confirmLogout').addEventListener('click', function() {
-            // Add your logout logic here
-            alert('You have logged out.');
-            $('#logoutModal').modal('hide');
-        });
-
-
-
-    </script>
+    
+    <script src="product.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
