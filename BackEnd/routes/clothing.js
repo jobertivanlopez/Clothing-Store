@@ -1,16 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-const { createProduct,getProduct,updateProduct } = require('../controller/clothingController')
+const { createProduct, getProduct, updateProduct, getAllProducts } = require('../controller/clothingController');
 
 // POST route to add a new product
-router.route('/new').post(createProduct)
+router.post('/new', createProduct);
 
-// GET route to get the new product
-router.route('/id/:id').get(getProduct); 
+// GET route to get a specific product by ID
+router.get('/:id', getProduct);
 
-// PATCH route to update a product
-router.route('/id/:productId').patch(updateProduct);
+// PATCH route to update a product by ID
 
+
+// PATCH request for updating a product
+router.patch('/:id/:productId', updateProduct);
+
+// GET route to get all products
+router.get('/', getAllProducts); // New route to get all products
 
 module.exports = router;

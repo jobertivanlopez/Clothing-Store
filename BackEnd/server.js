@@ -6,9 +6,11 @@ const express = require('express');
 const productRoutes = require('./routes/product');  
 const clothingRoutes = require('./routes/clothing');  
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 
 const app = express();
+app.use(cors());
 
 // Middleware to parse JSON
 app.use(express.json());
