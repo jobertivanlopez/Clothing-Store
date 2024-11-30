@@ -211,34 +211,49 @@ button.pay-now-btn {
   margin-top: 10px; /* Small space above "Pay Now" button */
   align-self: flex-end;
 }
-
-/* Card Styles */
+/* Card Styling */
 .card {
-  width: 100%; /* Ensures the card fits within the column */
-  height: 100%; /* Makes all cards the same height */
-  display: flex;
-  flex-direction: column;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: white;
 }
 
-.card-img-top {
-  height: 220px; /* Set a fixed height for images */
-  object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Card Content */
 .card-body {
-  flex-grow: 5; /* Ensures the body stretches to fill remaining space */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Aligns content evenly within the card body */
+  text-align: center;
+  padding: 1rem;
 }
 
 .card-title {
-  font-size: 1rem; /* Adjusts font size */
+  font-size: 1.2rem;
+  color: #ff3b6c;
   margin-bottom: 0.5rem;
 }
 
 .card-text {
-  font-size: 0.9rem; /* Adjust text size */
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
+/* Button Styling */
+.btn-add {
+  background: #ff758c;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-add:hover {
+  background: #ff3b6c;
+}
