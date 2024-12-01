@@ -31,4 +31,23 @@ document.getElementById('confirmLogout').addEventListener('click', function() {
     $('#logoutModal').modal('hide');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('http://localhost:4000/api/sales')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.querySelector('tbody');
+            tableBody.innerHTML = data.map(sale => `
+                <tr>
+                    <td>${sale.productCode}</td>
+                    <td>${sale.productName}</td>
+                    <td>${sale.stock}</td>
+                    <td>${sale.qtySold}</td>
+                    <td>${sale.qtyLeft}</td>
+                    <td>${sale.investment}</td>
+                    <td>${sale.sale}</td>
+                    <td>${sale.totalSale}</td>
+                </tr>
+            `).join('');
+        });
+});
 

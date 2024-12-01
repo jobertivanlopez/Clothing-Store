@@ -7,6 +7,7 @@ const productRoutes = require('./routes/product');
 const clothingRoutes = require('./routes/clothing');  
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const salesRoutes = require('./routes/sale');
 
 
 const app = express();
@@ -25,7 +26,7 @@ app.use((req, res, next) => {
 // Use routers for specific routes
 app.use('/api/products', productRoutes);  
 app.use('/api/clothings', clothingRoutes);  
-
+app.use('/api/sales', salesRoutes);
 
 
 
