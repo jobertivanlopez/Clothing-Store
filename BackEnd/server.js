@@ -17,11 +17,13 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
+
 // Middleware for logging request paths and methods
 app.use((req, res, next) => {
     console.log(req.path, req.method);
     next();
 });
+
 
 // Use routers for specific routes
 app.use('/api/products', productRoutes);  

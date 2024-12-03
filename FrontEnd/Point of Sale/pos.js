@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 fetch('http://localhost:4000/api/products')
     .then(response => response.json())
     .then(data => {
