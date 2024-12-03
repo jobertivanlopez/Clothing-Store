@@ -8,7 +8,7 @@ const clothingRoutes = require('./routes/clothing');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const salesRoutes = require('./routes/sale');
-
+const posRoutes = require('./routes/pos');
 
 const app = express();
 app.use(cors());
@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.use('/api/products', productRoutes);  
 app.use('/api/clothings', clothingRoutes);  
 app.use('/api/sales', salesRoutes);
-
+app.use('/api/pos', posRoutes);
 
 
 // Connect to the database
